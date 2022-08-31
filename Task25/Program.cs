@@ -1,7 +1,7 @@
-﻿int FindDegree(int a, int b)
+﻿int FindDegree(int a, int b)                                                //Метод возведения в степень a^b
 {
     int result;
-    if (b == 0)
+    if (b == 0)                                                             //проверка если b=0, то результат 1
     {
         return result = 1;
     }
@@ -12,13 +12,13 @@
     }
     return result;
 }
-Console.Write("Введите число основание степени: ");
+Console.Write("Введите число основание степени: ");                         //ввод чисел
 bool isNumberA = int.TryParse(Console.ReadLine(), out int a);
 Console.Write("Введите число показатель степени: ");
 bool isNumberB = int.TryParse(Console.ReadLine(), out int b);
-if (isNumberA != true || isNumberB != true || b<0 || (a==0 && b==0))
+if (isNumberA != true || isNumberB != true || b < 0 || (a == 0 && b == 0))
 {
     Console.WriteLine("Внимание!!! Некорректный ввод");
     return;
-}
-Console.WriteLine($"{a}^{b} = {FindDegree(a, b)}");
+}                                                                           //если b отрицательное: необходимо взять|b|, проделать весь алгоритм
+Console.WriteLine($"{a}^{b} = {FindDegree(a, b)}");                         //и вычислить результат a^-b = 1/a^b 
