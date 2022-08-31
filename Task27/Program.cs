@@ -1,4 +1,4 @@
-﻿int FindSumDigit(int arg)
+﻿int FindSumDigit(int arg)                                                   //Метод суммирования цифр в числе
 {
     int i = arg;
     int sum=0;
@@ -9,11 +9,11 @@
     }
     return sum;
 }    
-Console.Write("Введите число: ");
+Console.Write("Введите число: ");                                           //ввод и проверка числа
 bool isNumberX = int.TryParse(Console.ReadLine(), out int digit);
 if (isNumberX != true || digit < 0)
 {
     Console.WriteLine("Внимание!!! Некорректный ввод");
     return;
 }
-Console.Write($"Сумма всех цифр в числе: {FindSumDigit(digit)}");
+Console.Write($"Сумма всех цифр в числе: {FindSumDigit(digit)}");           //вызов метода сумирования цифр в числе
